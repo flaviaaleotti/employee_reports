@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Reports</title>
+</head>
+<style>
+    .button {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        display: inline-block;
+        padding: 7px 10px;
+        background-color: #3498db; 
+        color: #fff; 
+        text-decoration: none; /* Remove underlines from links */
+        border: none; /* Remove button borders */
+        border-radius: 5px; /* Rounded corners for the button */
+        margin-right: 10px; /* Add some space between buttons */
+    }
+    h1 {
+        font-family: 'Arial', sans-serif; 
+    }
+    label {
+        font-family: 'Arial', sans-serif;
+    }
+    form {
+            margin-bottom: 20px; /* Add vertical space between forms */
+        }
+</style>
+<body>
+    <h1>Filter Reports</h1>
+    <form method="get" action="/search/reports">
+        <label for="priority">Enter Priority:</label>
+        <input type="text" name="priority">
+        <label for="username">Enter Username:</label>
+        <input type="text" name="username">
+        <button type="submit">Search</button>
+    </form>
+
+
+    <!-- Display filtered reports or error messages here -->
+    <div id="result"></div>
+    <a href="/" class="button">Home page</a>
+</body>
+</html>

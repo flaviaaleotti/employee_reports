@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Added</title>
+</head>
+<style>
+    .button {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        display: inline-block;
+        padding: 7px 10px;
+        background-color: #3498db; 
+        color: #fff; 
+        text-decoration: none; /* Remove underlines from links */
+        border: none; /* Remove button borders */
+        border-radius: 5px; /* Rounded corners for the button */
+        margin-right: 10px; /* Add some space between buttons */
+        margin-top: 10px;
+    }
+    h1 {
+        font-family: 'Arial', sans-serif; 
+    }
+</style>
+<body>
+    <h1>Employee Added</h1>
+    <p>{{ message }}</p>
+    <p>New Employee ID: {{ new_employee_id }}</p>
+    <p>New Report ID: {{ new_report_id }}</p>
+    <a href="/" class="button">Home page</a>
+</body>
+</html>

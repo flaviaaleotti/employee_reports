@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Report</title>
+</head>
+<style>
+    .button {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        display: inline-block;
+        padding: 7px 10px;
+        background-color: #3498db; 
+        color: #fff; 
+        text-decoration: none; /* Remove underlines from links */
+        border: none; /* Remove button borders */
+        border-radius: 5px; /* Rounded corners for the button */
+        margin-right: 10px; /* Add some space between buttons */
+        margin-top: 10px;
+    }
+    button {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        display: inline-block;
+        padding: 7px 10px;
+        background-color: #3498db; 
+        color: #fff; 
+        text-decoration: none; /* Remove underlines from links */
+        border: none; /* Remove button borders */
+        border-radius: 5px; /* Rounded corners for the button */
+        margin-right: 10px; /* Add some space between buttons */
+        margin-top: 10px;
+    }
+    h1 {
+        font-family: 'Arial', sans-serif; 
+    }
+    label {
+        font-family: 'Arial', sans-serif;
+    }
+    input {
+        margin-bottom: 20px; /* Add vertical space between inputs */
+    }
+</style>
+<body>
+    <h1>Delete Report</h1>
+
+    <form method="POST" action="/del_report">
+        <label for="report_id">Report ID:</label>
+        <input type="text" name="report_id" required><br>
+
+        <button type="submit">Delete</button>
+    </form>
+    <br>
+    <a href="/" class="button">Home page</a>
+</body>
+</html>
