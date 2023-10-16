@@ -491,7 +491,7 @@ def update_employee(employee_id):
                 conn_reports.commit()
                 conn_reports.close()
 
-            return jsonify({"message": "Employee fields and related reports updated successfully"})
+            return jsonify({"message": "Employee fields and related reports successfully updated"})
         else:
             conn_employees.close()
             return jsonify({"message": "No valid fields to update"}, 400)
@@ -536,7 +536,7 @@ def update_report(report_id):
             conn_reports.commit()
             conn_reports.close()
 
-            return jsonify({"message": "Employee fields and related reports updated successfully"})
+            return jsonify({"message": "Report fields successfully updated"})
         else:
             conn_employees.close()
             return jsonify({"message": "No valid fields to update"}, 400)

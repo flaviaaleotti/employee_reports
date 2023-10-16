@@ -24,7 +24,7 @@ cursor.execute('INSERT INTO reports (id,\
                                     (1,\
                                      'Project XXX report',\
                                      'Information about the progresses made in the development of web project XXX',\
-                                     'faleotti',\
+                                     'fmare',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
                                      title,\
