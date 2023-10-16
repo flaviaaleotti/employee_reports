@@ -28,9 +28,9 @@ cursor.execute('INSERT INTO employees (id,\
                                        department) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',\
                                       (1,\
                                        'Flavia',\
-                                       'Aleotti',\
-                                       'faleotti',\
-                                       'flavia.aleotti@company.com',\
+                                       'Mare',\
+                                       'fmare',\
+                                       'flavia.mare@company.com',\
                                        'F',\
                                        'junior developer',\
                                        'A'))
