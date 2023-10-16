@@ -114,6 +114,8 @@ curl -X PUT -H "Content-Type: application/json" -d '{"title": "senior developer"
 
 the -X PUT option is needed to edit an item, the -H "Content-Type: application/json" tells curl that we will pass the update content as json format, and -d preceeds the actual data for the update request. The last part of the command contains the url for the update request, ending with the employee id (1 in our case).
 
+If the update was successful, the message "Employee fields and related reports successfully updated" should be printed in your terminal.
+
 ### UPDATING A REPORT
 Similar to what we have seen for employees, also reports can be updated (e.g., to change the priority from high to low or viceversa).
 In order to update an existing report, wemust know its id (as it is the only immutable field).
@@ -122,5 +124,7 @@ One or more of the remaining fields (except for the employee_username) can be ed
 curl -X PUT -H "Content-Type: application/json" -d '{"priority": "high", "title": "Updated priority"}' http://127.0.0.1:5000/update/reports/1
 
 the -X PUT option is needed to edit an item, the -H "Content-Type: application/json" tells curl that we will pass the update content as json format, and -d preceeds the actual data for the update request. The last part of the command contains the url for the update request, ending with the report id (1 in our case).
+
+If the update was successful, the message "Report fields successfully updated" should be printed in your terminal.
 
 
