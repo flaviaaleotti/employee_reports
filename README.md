@@ -1,17 +1,17 @@
 # EMPLOYEES/REPORT DATABASE MANAGEMENT
 
-This is a REST API written in Python to manage a database of employees and related reports
-The app is ment to run locally with local databases that can easily be created via some Python scripts (see instruction below)
+This is a REST API written in Python to manage a database of employees and related reports.
+The app is meant to run locally with local databases that can easily be created via some Python scripts (see instruction below)
 
 Requirements:
 - Python 3.6 or + 
 - Python modules: flask, sqlite3, requests, uuid, subprocess
 - pytest for testing the app
 
-any missing python module as well as pytest can be easily be installed with pip (e.g: pip install flask). Make sure you are using pip3 version.
+any missing python module (including pytest) should be easily installed with pip (e.g: pip install flask). Make sure you are using pip3 version.
 
-The following setup instructions (as well as the launch of the Python API) are meant to be performed from a terminal.
-After the app is launched and running, its functionalities can be accessed via browser (see instructions below) or via terminal (e.g. curl)
+The following setup instructions (as well as the launch of the Python API) are supposed to be performed from a terminal.
+After the app is launched and running, its functionalities can be accessed via browser (see instructions below) or via terminal (e.g. curl).
 
 ## SETUP INSTRUCTIONS
 
@@ -20,8 +20,8 @@ Download the repository from github:
 git clone https://github.com/flaviaaleotti/employee_reports.git
 
 and enter the employee_reports/ directory.
-Inside the repository, you will find two python scripts that will automatically generate two basic default SQL databases (for employees and related reports)
-Genarate the employees.db and reports.db databases by running
+Inside the repository, you will find two python scripts that will automatically generate two default SQL databases (for employees and related reports)
+Generate the employees.db and reports.db databases by running
 
 python build_employees_database.py
 
@@ -29,15 +29,15 @@ python build_report_database.py
 
 from terminal inside the employee_reports/ directory.
 
-The pre-generated databases employees.db and reports.db are already available in teh repository, but you can run the above scripts to reset the database to the starting records at anytime in the future.
+The pre-generated databases employees.db and reports.db are already available in the repository, but you can run the above scripts to reset the database to the starting status at anytime in the future.
 
-Now you are ready to start the API! run from terminal
+Now you are ready to start the API! Run from terminal:
 
 python RESTAPI.py
 
 ## TESTING
 
-Before using the API through your browser, you can test it with pytest in order to assess all endpoints.
+Before using the API through your browser, it is better to test it with pytest in order to check the endpoints.
 To run the tests, open another terminal (leave the API running, otherwise all tests will fail), go to the employee_reports/ directory and simply type
 
 pytest
@@ -48,7 +48,7 @@ If all tests are successfully passed, you can open your browser and start using 
 #### REMEMBER:  the API should be always kept running in order to use it, so make sure that you do not close the terminal where you have your 'python  RESTAPI.py' command running :)
 
 ## USING THE API
-This API is designed to help you interact with the employee.db and report.db databases. These are SQL databases, in which items are stored in tables. Each row in a table corresponds to an element (an employee or a record in our case) and is called a record, while each column corresponds to a particular piece of information characterizing the specific record (e.g: name, surname, job tilte etc. in case of an emoloyee). The table columns are called fields.
+This API is designed to help you interact with the employee.db and report.db databases. These are SQL databases, in which items are stored in tables. Each row in a table corresponds to an element (an employee or a report in our case) and is called a record, while each column corresponds to a particular piece of information characterizing the records (e.g: name, surname, job title etc. in case of an employee). The table columns are called fields.
 
 ### DATABASE DETAILS
 SQL databases are conceptually simple and easy to interact with through Python flask module, that's why they were chosen for this API.
@@ -87,7 +87,7 @@ By clicking on "Search report", you will be redirected to the 'Filter Reports' p
 ### ADDING A NEW EMPLOYEE
 From the home page, you can reach the 'Add Employee' page by clicking on the "Add new employee" button. In the Add Employee page, you cal fill all the table fields (all fields are required) and press "Add".
 
-If you provided a valid username, the procedure should be successful, and the new employee will be added to emoployee.db database. Because each employee must have at least one report, the creation of a new employee is automatically creating also a new defaul item in the reports.db database (tilte: Firts report), linked to the username of the new employee.
+If you provided a valid username, the procedure should be successful, and the new employee will be added to employee.db database. Because each employee must have at least one report, the creation of a new employee is automatically creating also a new default item in the reports.db database (title: First report), linked to the username of the new employee.
 
 ### ADDING A NEW REPORT
 From the home page, you can reach the 'Add Report' page by clicking on the "Add new report" button. In the Add Report page, you cal fill all the table fields (all fields are required) and press "Add".
@@ -96,10 +96,10 @@ If you provided a valid employee username, the procedure should be successful, a
 
 ### DELETING AN EMPLOYEE
 If an employee stops working for our company, we can delete its record from the employee.db database easily.
-From the home page, click on the "Delete employee" button to reach the "Delete employee" page. Insert the username and predd "Delete". If the provided username exists, the employee will be deleted from employee.db database, and all its related reports will also be deleted from reports.db database.
+From the home page, click on the "Delete employee" button to reach the "Delete employee" page. Insert the username and press "Delete". If the provided username exists, the employee will be deleted from employee.db database, and all its related reports will also be deleted from reports.db database.
 
 ### DELETING A REPORT
-From the home page, click on the "Delete report" button to reach the "Delete report" page. Insert the report id and predd "Delete". If the provided report id exists, the report will be deleted from report.db database.
+From the home page, click on the "Delete report" button to reach the "Delete report" page. Insert the report id and press "Delete". If the provided report id exists, the report will be deleted from report.db database.
 
 ## OTHER FUNCTIONALITIES
 Employees and reports can also be updated. However, implementing the update method trough HTML pages has proved to be harder than expected an I was not able to implement it in the html interface.
@@ -146,9 +146,9 @@ One html template (that is not initially present in the repository) will be crea
 
 The RESTAPI.py code (after the definition of html interface and templates) contains functions for the basic API functionalities GET, POST, PUT and DELETE. Here is a short description of the functions:
 - list_all_employees() and list_all_reports() functions are used to list the full employees.db and reports.db database (respectively). These functions are not meant to be used by general public, and are not present in the html interface. They are left for "expert" users that can execute them by typing the route in their browser (or through curl).
-- get_employee_id() and get_report_id() are used to search an item by id in the emoployees.db and reports.db database (respectively). These functions are only used for testing and have no html interface, but can again be used through curl or browser
+- get_employee_id() and get_report_id() are used to search an item by id in the employees.db and reports.db database (respectively). These functions are only used for testing and have no html interface, but can again be used through curl or browser
 - filter_reports() function is the function that filters the reports.db database based on employee username and/or priority (filtering according to both fields is allowed). As mentioned before, it builds an html template with the results. Results are returned with paginated size 10, but "Next page" and "Previous page" buttons are provided in the html output page, so that the user does not have to perform more than one research.
-- create_new_employee_item() adds a new employee item to emoployees.db database (POST method). It requires an input (either json or html forms) that is used to fill-in all the fields of the employees table (see above). The username passed for the new employee is also used to create a new default item in the reports.db database. If the function is called from a terminal (e.g. curl or pytest) it returns a json-type dictionary containing the details of the new employee and report items; if the function is called through the html interface, instead, a template html page with a message and the new IDs is displayed.
+- create_new_employee_item() adds a new employee item to employees.db database (POST method). It requires an input (either json or html forms) that is used to fill-in all the fields of the employees table (see above). The username passed for the new employee is also used to create a new default item in the reports.db database. If the function is called from a terminal (e.g. curl or pytest) it returns a json-type dictionary containing the details of the new employee and report items; if the function is called through the html interface, instead, a template html page with a message and the new IDs is displayed.
 - create_new_report_item() adds a new report item to reports.db database (POST method). It requires an input (either json or html forms) that is used to fill-in all the fields of the reports table (see above). If the function is called from a terminal (e.g. curl or pytest) it returns a json-type dictionary containing the details of the new employee and report items; if the function is called through the html interface, instead, a template html page with a message and the new ID is displayed.
 - delete_report(report_id) function checks that the report associated with the passed id exists, and deletes it
 - delete_employee(username) function checks that the employee associated with the passed username exists, and deletes it. If it exists, the passed username is also used to search and delete all reports associated with the deleted employee.
