@@ -93,7 +93,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (8,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'lbebi',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -103,7 +103,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (9,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'mpapi',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -113,7 +113,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (10,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'mpapi',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -123,7 +123,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (11,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'lbebi',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -133,7 +133,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (12,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'faleotti',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -143,7 +143,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (13,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'faleotti',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -153,7 +153,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (14,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'lrelli',\
                                      'low',))
 cursor.execute('INSERT INTO reports (id,\
@@ -163,7 +163,7 @@ cursor.execute('INSERT INTO reports (id,\
                                      priority) VALUES (?, ?, ?, ?, ?)',\
                                     (15,\
                                      'New report',\
-                                     'new report needed to reach ore than 10 low-priority reports',\
+                                     'new report needed to reach more than 10 low-priority reports',\
                                      'lrelli',\
                                      'low',))
 
