@@ -19,14 +19,16 @@ Download the repository from github:
 
 git clone https://github.com/flaviaaleotti/employee_reports.git
 
-and enter the employee_reports/ directory
+and enter the employee_reports/ directory.
 Inside the repository, you will find two python scripts that will automatically generate two basic default SQL databases (for employees and related reports)
 Genarate the employees.db and reports.db databases by running
 
 python3 build_employees_database.py
+
 python3 build_report_database.py
 
-from terminal inside the employee_reports/ directory
+from terminal inside the employee_reports/ directory.
+
 The pre-generated databases employees.db and reports.db are already available in teh repository, but you can run the above scripts to reset the database to the starting records at anytime in the future.
 
 Now you are ready to start the API! run from terminal
@@ -46,7 +48,7 @@ If all tests are successfully passed, you can open your browser and start using 
 #### REMEMBER:  the API should be always kept running in order to use it, so make sure that you do not close the terminal where you have your 'python3  RESTAPI.py' command running :)
 
 ## USING THE API
-This API is designed to help you interact with the employee.db and report.db databases. These are SQL databases, in which items are stored in tables. Each row in a table corresponds to an element (an employee or a recod in our case) and is called a record, while each column corresponds to a particular piece of information characterizing the specific record (e.g: name, surname, job tilte etc. in case of an emoloyee). The table columns are called fields.
+This API is designed to help you interact with the employee.db and report.db databases. These are SQL databases, in which items are stored in tables. Each row in a table corresponds to an element (an employee or a record in our case) and is called a record, while each column corresponds to a particular piece of information characterizing the specific record (e.g: name, surname, job tilte etc. in case of an emoloyee). The table columns are called fields.
 
 ### DATABASE DETAILS
 SQL databases are conceptually simple and easy to interact with through Python flask module, that's why they were chosen for this API.
@@ -55,12 +57,12 @@ The employee items are characterized by the following fields:
 - id : this is a unique identified (integer number) characterizing the employee
 - first_name : first name of employee (string)
 - last_name : last name of employee (string)
-- username : employee username (string). The username is required to be unique.
+- username : employee username (string). The username is required to be unique within the database.
 - email: institutional email address of employee, characterized by the company.com domain (string)
 - title : employee job title (string)
 - department : company department (string)
 
-In the default database, the username field is created by combining the firt letter of first name and the last name (e.g., employee Mario Rossi would have username mrossi), but this is not mandatory and you can crate new employees with whatever username (as long as the uniqueness is preserved).
+In the default database, the username field is created by combining the first letter of first name and the last name (e.g., employee Mario Rossi would have username mrossi), but this is not mandatory and you can crate new employees with whatever username (as long as the uniqueness is preserved).
 In the default database, the department field is a capital single letter ('A', 'B', 'C'...), but any other string will be accepted upon creation of a new employee. The same holds for all other string fields (except username, see above).
 
 The report items are characterized by the following fields:
@@ -129,7 +131,7 @@ the -X PUT option is needed to edit an item, the -H "Content-Type: application/j
 If the update was successful, the message "Report fields successfully updated" should be printed in your terminal.
 
 ### SHOWING ALL DATABASE ITEMS
-Having access to the full database is not a desirable feature for an API (for security/privacy reasons). However, for this simple dummy case, it might be usefull to see the full list of employees or reports in the database. These functionalities are not accessible through the html interface directly, but are present in the API code an can be executed by going to the corresponding route (see the list_all_employees() and list_all_reports() methods)
+Having access to the full database is not a desirable feature for an API (for security/privacy reasons). However, for this simple dummy case, it might be useful to see the full list of employees or reports in the database. These functionalities are not accessible through the html interface directly, but are present in the API code an can be executed by going to the corresponding route (see the list_all_employees() and list_all_reports() methods)
 
 ## TECHNICAL DETAILS
 Here are some technical details explaining the structure of the code.
